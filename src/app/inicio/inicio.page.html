@@ -1,0 +1,158 @@
+<ion-content [fullscreen]="true" #contenido>
+  <!-- BARRA SUPERIOR DE CONTACTO -->
+  <div class="barra-contacto">
+    <div class="contenedor-contacto">
+      <span>contacto&#64;joli.mx</span>
+      <span>Tel. 442 425 24 52</span>
+    </div>
+  </div>
+
+  <div class="barra-navegacion">
+  <a href="/inicio">
+    <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-joli" />
+  </a>
+  <nav class="menu-principal">
+    <a href="/nosotros">NOSOTROS</a>
+    <a href="/pensiones">PENSIONES Y AFORE</a>
+    <a href="/seguros">SEGUROS</a>
+    <a href="/planes">PLANES DE RETIRO</a>
+    <a (click)="scrollTo('contacto')">CONTACTO</a>
+  </nav>
+</div>
+
+
+  <!-- HERO BANNER CON CARRUSEL -->
+  <section class="hero-banner">
+    <!-- Capas del carrusel -->
+    <div
+      class="carousel-slide"
+      *ngFor="let img of imagenesCarrusel; let i = index"
+      [ngStyle]="{ 'background-image': 'url(' + img + ')', 'opacity': i === imagenActual ? '1' : '0' }"
+    ></div>
+
+    <!-- Texto centrado -->
+    <div class="contenido-hero">
+      <h2>¡OBTÉN LA <strong>MEJOR PENSIÓN</strong> POSIBLE!</h2>
+      <div class="botones">
+        <div class="btn-modalidad">MODALIDAD 40</div>
+        <a href="/pensiones" class="btn-info">Más información</a>
+      </div>
+    </div>
+  </section>
+
+<section class="seccion-presentacion">
+  <div class="contenedor-presentacion">
+    <!-- Imagen con caja superpuesta -->
+    <div class="imagen-presentacion">
+      <img src="assets/viejito1.jpg" alt="Adulto mayor asesorado" />
+      <div class="texto-superpuesto">
+        <p>Más de 1,000 personas<br /><strong>asesoradas para una<br />mejor pensión</strong></p>
+      </div>
+    </div>
+
+    <!-- Contenido textual alineado al centro -->
+    <div class="contenido-texto">
+      <h3>MEJORAR TU FUTURO<br />FINANCIERO ES<br />NUESTRA MISIÓN</h3>
+      <p>
+        Queremos transformar el futuro financiero de nuestros clientes mediante la asesoría y orientación
+        sobre estrategias de pensiones, retiro, protección o inversión.
+      </p>
+      <a class="btn-conocenos" href="/nosotros">
+        Conócenos <span class="flecha">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="seccion-servicios">
+  <h2 class="titulo-seccion">NUESTROS SERVICIOS</h2>
+  <div class="grid-servicios">
+    <!-- Tarjeta 1 -->
+    <div class="card-servicio fondo-1">
+      <h3>SEGUROS</h3>
+      <div class="icono-mas">+</div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="card-servicio fondo-2">
+      <h3>PLAN PERSONAL<br />DE RETIRO</h3>
+      <div class="icono-mas">+</div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="card-servicio fondo-3">
+      <h3>AFORE Y<br />PENSIONES</h3>
+      <div class="icono-mas">+</div>
+    </div>
+
+    <!-- Tarjeta 4 con descripción -->
+    <div class="card-servicio fondo-4 texto">
+      <h3>CRÉDITO A<br />PENSIONADOS</h3>
+      <div class="icono-mas">+</div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion-testimonios">
+  <div class="encabezado-testimonios">
+    <h2>ELLOS YA CONFIARON Y ASEGURARON UN MEJOR FUTURO</h2>
+  </div>
+
+  <div class="contenedor-testimonios">
+    <!-- Testimonio 1 -->
+    <div class="card-testimonio">
+      <h3>Guadalupe Pérez</h3>
+      <p>
+        SUPER RECOMIENDO!!! Excelente atención!! Financiaron mi modalidad 40, trámite sencillo, información transparente y profesionalismo. Muy satisfecha!
+      </p>
+    </div>
+
+    <!-- Testimonio 2 -->
+    <div class="card-testimonio">
+      <h3>lvmendoz Vázquez</h3>
+      <p>
+        Excelente servicio, atención personalizada, jamás te dejan solo, resuelven todas, todas tus dudas y lo mejor, te dan esa confianza que se requiere al 100%. Totalmente recomendables.
+      </p>
+    </div>
+
+    <!-- Testimonio 3 -->
+    <div class="card-testimonio">
+      <h3>Luis Bernardo Arellano Eguiza</h3>
+      <p>
+        Más que asesores, buenos seres humanos. Muy profesionales. Los recomiendo enteramente. Sigan así ...
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion-unete">
+  <div class="contenedor-unete">
+    <!-- Imagen a la izquierda -->
+    <div class="imagen-unete">
+      <img src="assets/equipo-joli.png" alt="Equipo Joli" />
+    </div>
+
+    <!-- Contenido a la derecha -->
+    <div class="contenido-unete">
+      <h2>ÚNETE A NUESTRO EQUIPO</h2>
+      <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-unete" />
+      <p>
+        Somos una gran familia donde<br />
+        el éxito individual construye el<br />
+        éxito de todos
+      </p>
+      <button class="btn-unete">
+        Más información <span class="flecha">→</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<div id="contacto">
+  <app-footer></app-footer>
+</div>
+
+
+
+</ion-content>

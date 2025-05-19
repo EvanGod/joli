@@ -1,0 +1,115 @@
+.footer-contacto {
+  background: linear-gradient(to right, #00cbe0, #003b6f);
+  padding: 3rem 5%;
+  color: white;
+
+  .footer-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .col-logo {
+    flex: 1 1 25%;
+    text-align: center;
+
+    .logo-footer {
+      width: 80px;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .redes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  ion-icon {
+    font-size: 28px;
+    color: white;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+  }
+
+  .col-contacto {
+    flex: 1 1 30%;
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+
+  ion-icon {
+    font-size: 20px;
+    color: white;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  span {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}
+
+    }
+  }
+
+  .col-form {
+    flex: 1 1 35%;
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      input {
+        border: none;
+        padding: 10px;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        color: black;
+      }
+
+      input,
+  select {
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    appearance: none;
+    color: black;
+  }
+    }
+  }
+}
+

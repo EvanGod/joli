@@ -1,0 +1,132 @@
+<ion-content [fullscreen]="true" #contenido>
+  <!-- BARRA SUPERIOR DE CONTACTO -->
+  <div class="barra-contacto">
+    <div class="contenedor-contacto">
+      <span>contacto&#64;joli.mx</span>
+      <span>Tel. 442 425 24 52</span>
+    </div>
+  </div>
+
+  <div class="barra-navegacion">
+  <a href="/inicio">
+    <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-joli" />
+  </a>
+  <nav class="menu-principal">
+    <a href="/nosotros">NOSOTROS</a>
+    <a href="/pensiones">PENSIONES Y AFORE</a>
+    <a class="selected" href="/seguros">SEGUROS</a>
+    <a href="/planes">PLANES DE RETIRO</a>
+    <a (click)="scrollTo('contacto')">CONTACTO</a>
+  </nav>
+</div>
+
+<section class="seccion-seguros">
+  <div class="overlay-seguros">
+    <h2>Protege lo que más amas</h2>
+  </div>
+
+  <div class="contenedor-tarjetas">
+    <div class="tarjeta-seguro">
+      <ion-icon name="medkit-outline"></ion-icon>
+      <h3>GASTOS MÉDICOS<br />MAYORES</h3>
+    </div>
+    <div class="tarjeta-seguro">
+      <ion-icon name="airplane-outline"></ion-icon>
+      <h3>DE VIAJE O VIDA<br />TEMPORAL</h3>
+    </div>
+    <div class="tarjeta-seguro">
+      <ion-icon name="person-outline"></ion-icon>
+      <h3>HOMBRE CLAVE<br />EMPRESARIAL</h3>
+    </div>
+    <div class="tarjeta-seguro">
+      <ion-icon name="car-outline"></ion-icon>
+      <h3>DE AUTO</h3>
+    </div>
+  </div>
+</section>
+
+
+<section class="seccion-medica-total">
+  <div class="contenedor-medica">
+    <div class="card-medica">
+      <img src="assets/medical.png" alt="Médica Total Plus" />
+      <a href="/assets/ficha-tecnica-medica-total.pdf" target="_blank" class="descargar-ficha">
+        DESCARGAR FICHA TÉCNICA
+      </a>
+    </div>
+
+    <div class="contenido-beneficios">
+      <h3>BENEFICIOS</h3>
+      <ul>
+        <li>Más de 12 mil proveedores médicos en todo México.</li>
+        <li>Consulta médica a domicilio.</li>
+        <li>Tratamiento ambulatorio.</li>
+        <li>Servicios de hospitalización.</li>
+        <li>Cobertura desde la atención médica primaria hasta la atención médica mayor.</li>
+        <li>Cobertura de Maternidad.</li>
+      </ul>
+
+      <button class="btn-contactar">
+        Contactar agente <ion-icon name="arrow-forward-outline"></ion-icon>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<section class="seccion-empresa">
+  <div class="contenido-empresa">
+    <div class="texto-empresa">
+      <h2>PROTEGE A TU EMPRESA</h2>
+      <h3>BENEFICIOS</h3>
+      <ul>
+        <li>• 100% deducible de impuestos</li>
+        <li>• Retorno total de tu inversión</li>
+        <li>• Rendimientos al terminar el plazo</li>
+      </ul>
+
+      <button class="btn-contactar">
+        Contactar agente
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </button>
+    </div>
+
+    <div class="imagen-empresa">
+      <img src="assets/protege.png" alt="Protege a tu empresa" />
+      <a href="assets/ficha-hombre-clave.pdf" download class="ficha-tecnica">DESCARGAR FICHA TÉCNICA</a>
+    </div>
+  </div>
+</section>
+
+<section class="seccion-unete">
+    <div class="contenedor-unete">
+      <!-- Imagen a la izquierda -->
+      <div class="imagen-unete">
+        <img src="assets/equipo-joli.png" alt="Equipo Joli" />
+      </div>
+
+      <!-- Contenido a la derecha -->
+      <div class="contenido-unete">
+        <h2>ÚNETE A NUESTRO EQUIPO</h2>
+        <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-unete" />
+        <p>
+          Somos una gran familia donde<br />
+          el éxito individual construye el<br />
+          éxito de todos
+        </p>
+        <button class="btn-unete">
+          Más información <span class="flecha">→</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+
+<div id="contacto">
+  <app-footer></app-footer>
+</div>
+
+
+
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true" #contenido>
+  <!-- BARRA SUPERIOR DE CONTACTO -->
+  <div class="barra-contacto">
+    <div class="contenedor-contacto">
+      <span>contacto&#64;joli.mx</span>
+      <span>Tel. 442 425 24 52</span>
+    </div>
+  </div>
+
+  <div class="barra-navegacion">
+  <a href="/inicio">
+    <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-joli" />
+  </a>
+  <nav class="menu-principal">
+    <a href="/nosotros">NOSOTROS</a>
+    <a href="/pensiones">PENSIONES Y AFORE</a>
+    <a href="/seguros">SEGUROS</a>
+    <a class="selected" href="/planes">PLANES DE RETIRO</a>
+    <a (click)="scrollTo('contacto')">CONTACTO</a>
+  </nav>
+</div>
+
+
+
+<div id="contacto">
+  <app-footer></app-footer>
+</div>
+
+
+
+</ion-content>

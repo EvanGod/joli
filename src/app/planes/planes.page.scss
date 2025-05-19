@@ -1,0 +1,54 @@
+.barra-contacto {
+    background: linear-gradient(to right, #00bcd4, #003b6f); // Degradado horizontal azul
+    color: white;
+    font-size: 13px;
+    padding: 6px 0;
+
+    .contenedor-contacto {
+        width: 90%;
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+    }
+}
+
+
+/* NAVEGACIÓN PRINCIPAL */
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 5%;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+
+    .logo-joli {
+        height: 60px;
+    }
+
+    .menu-principal {
+        display: flex;
+        gap: 2rem;
+
+        a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+
+            &:hover {
+                color: #005caa;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+
+        .selected{
+            color: #005caa;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}

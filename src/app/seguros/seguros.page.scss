@@ -1,0 +1,365 @@
+.barra-contacto {
+    background: linear-gradient(to right, #00bcd4, #003b6f); 
+    color: white;
+    font-size: 13px;
+    padding: 6px 0;
+
+    .contenedor-contacto {
+        width: 90%;
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+    }
+}
+
+
+/* NAVEGACIÓN PRINCIPAL */
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 5%;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+
+    .logo-joli {
+        height: 60px;
+    }
+
+    .menu-principal {
+        display: flex;
+        gap: 2rem;
+
+        a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+
+            &:hover {
+                color: #005caa;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+
+        .selected{
+            color: #005caa;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}
+
+.seccion-seguros {
+  position: relative;
+  background: url('/assets/familia.jpg') no-repeat center center / cover;
+  padding: 0; 
+  
+
+  .overlay-seguros {
+    background: linear-gradient(to right, rgba(0, 200, 255, 0.4), rgba(0, 56, 122, 0.4));
+    padding: 4rem 1rem 8rem; 
+    text-align: center;
+    color: white;
+    height: 500px;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0;
+      margin-top: 125px;
+    }
+  }
+
+  .contenedor-tarjetas {
+    background: white;
+    margin-top: -5rem; 
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    
+
+    .tarjeta-seguro {
+      background: white;
+      color: #003b6f;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      text-align: center;
+
+      ion-icon {
+        font-size: 3rem;
+        color: #00cbe0;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+
+.seccion-medica-total {
+  padding: 4rem 1rem;
+  background: white;
+
+  .contenedor-medica {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+
+    .card-medica {
+      max-width: 350px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 100%;
+        display: block;
+      }
+
+      .descargar-ficha {
+        margin: 1.2rem 0;
+        font-weight: 700;
+        color: #0041aa;
+        text-decoration: underline;
+      }
+    }
+
+    .contenido-beneficios {
+      max-width: 400px;
+
+      h3 {
+        color: #0041aa;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+      }
+
+      ul {
+        list-style: disc;
+        padding-left: 1.5rem;
+
+        li {
+          font-size: 0.95rem;
+          line-height: 1.6;
+          margin-bottom: 0.8rem;
+          color: black;
+        }
+      }
+
+      .btn-contactar {
+        margin-top: 2rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: transparent;
+        color: #0041aa;
+        border: 2px solid #0041aa;
+        padding: 0.6rem 1.5rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+
+        ion-icon {
+          font-size: 1.1rem;
+        }
+
+        &:hover {
+          background-color: #0041aa;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+
+.seccion-empresa {
+  background-color: #002b5c; 
+  color: white;
+  padding: 4rem 2rem;
+
+  .contenido-empresa {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+
+    .texto-empresa {
+      flex: 1 1 300px;
+      max-width: 650px;
+      text-align: right;
+
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+
+      h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem 0;
+
+        li {
+          font-size: 1rem;
+          line-height: 1.8;
+        }
+      }
+
+      .btn-contactar {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.5rem;
+        background: transparent;
+        border: 2px solid white;
+        border-radius: 8px;
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        ion-icon {
+          font-size: 1.2rem;
+        }
+
+        &:hover {
+          background: white;
+          color: #002b5c;
+        }
+      }
+    }
+
+    .imagen-empresa {
+      flex: 1 1 100px;
+      text-align: center;
+      max-width: 450px;
+
+      img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .ficha-tecnica {
+        display: block;
+        margin-top: 1.5rem;
+        font-weight: 700;
+        color: white;
+        text-decoration: underline;
+        text-align: center;
+
+        &:hover {
+          color: #00cbe0;
+        }
+      }
+    }
+  }
+}
+
+
+.seccion-unete {
+  background-color: #ffffff;
+
+  .contenedor-unete {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .imagen-unete {
+    flex: 1 1 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .contenido-unete {
+    flex: 1 1 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 1rem;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #002f6c;
+    }
+
+    .logo-unete {
+      width: 100px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .btn-unete {
+      border: 2px solid #0050b2;
+      background: transparent;
+      color: #0050b2;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.3s ease;
+
+      .flecha {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      &:hover {
+        background-color: #0050b2;
+        color: white;
+      }
+    }
+  }
+}

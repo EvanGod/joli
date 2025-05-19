@@ -1,0 +1,279 @@
+.barra-contacto {
+    background: linear-gradient(to right, #00bcd4, #003b6f); // Degradado horizontal azul
+    color: white;
+    font-size: 13px;
+    padding: 6px 0;
+
+    .contenedor-contacto {
+        width: 90%;
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+    }
+}
+
+
+/* NAVEGACIÓN PRINCIPAL */
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 5%;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+
+    .logo-joli {
+        height: 60px;
+    }
+
+    .menu-principal {
+        display: flex;
+        gap: 2rem;
+
+        a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+
+            &:hover {
+                color: #005caa;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+
+        .selected{
+            color: #005caa;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.seccion-banner-pension {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: url('/assets/viejitos2.jpg') no-repeat center center;
+  background-size: cover;
+
+  .overlay {
+    background: linear-gradient(to right, rgba(0, 187, 215, 0.55), rgba(0, 57, 122, 0.4));
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+
+    .contenido-banner {
+      max-width: 700px;
+
+      h2 {
+        font-size: 2.4rem;
+        font-weight: 300;
+
+        strong {
+          font-weight: 800;
+        }
+      }
+
+      .etiqueta-modalidad {
+        display: inline-block;
+        margin-top: 1.5rem;
+        background-color: #002f6c; // azul marino fuerte
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+
+.seccion-unete {
+  background-color: #ffffff;
+
+  .contenedor-unete {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .imagen-unete {
+    flex: 1 1 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .contenido-unete {
+    flex: 1 1 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 1rem;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #002f6c;
+    }
+
+    .logo-unete {
+      width: 100px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .btn-unete {
+      border: 2px solid #0050b2;
+      background: transparent;
+      color: #0050b2;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.3s ease;
+
+      .flecha {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      &:hover {
+        background-color: #0050b2;
+        color: white;
+      }
+    }
+  }
+}
+
+
+.seccion-modalidad40 {
+  padding: 4rem 5%;
+  background: white;
+
+  .contenedor-modalidad {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .video-contenedor {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+
+    .marco-video {
+      border: 10px solid #003b6f;
+      padding: 6px;
+      background-color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+      video {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .contenido-info {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    h3 {
+      color: #0050b2;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #000;
+    }
+
+    .lista-condiciones {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        color: black;
+
+        ion-icon {
+          font-size: 1.2rem;
+          color: #00cbe0;
+        }
+      }
+    }
+
+    .btn-agendar {
+      align-self: start;
+      background: transparent;
+      border: 2px solid #0050b2;
+      color: #0050b2;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #0050b2;
+        color: white;
+      }
+
+      .flecha {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

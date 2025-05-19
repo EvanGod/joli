@@ -1,0 +1,105 @@
+<ion-content [fullscreen]="true" #contenido>
+  <!-- BARRA SUPERIOR DE CONTACTO -->
+  <div class="barra-contacto">
+    <div class="contenedor-contacto">
+      <span>contacto&#64;joli.mx</span>
+      <span>Tel. 442 425 24 52</span>
+    </div>
+  </div>
+
+  <div class="barra-navegacion">
+    <a href="/inicio">
+      <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-joli" />
+    </a>
+    <nav class="menu-principal">
+      <a href="/nosotros">NOSOTROS</a>
+      <a class="selected" href="/pensiones">PENSIONES Y AFORE</a>
+      <a href="/seguros">SEGUROS</a>
+      <a href="/planes">PLANES DE RETIRO</a>
+      <a (click)="scrollTo('contacto')">CONTACTO</a>
+    </nav>
+  </div>
+
+  <section class="seccion-banner-pension">
+    <div class="overlay">
+      <div class="contenido-banner">
+        <h2>¡OBTÉN LA <strong>MEJOR PENSIÓN</strong> POSIBLE!</h2>
+        <div class="etiqueta-modalidad">MODALIDAD 40</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-modalidad40">
+    <div class="contenedor-modalidad">
+      <!-- LADO IZQUIERDO: VIDEO -->
+      <div class="video-contenedor">
+        <div class="marco-video">
+          <video
+            autoplay
+            muted
+            playsinline
+            controls
+            poster="/assets/poster-modalidad40.jpg"
+          >
+            <source src="/assets/modalidad40.mp4" type="video/mp4" />
+            Tu navegador no soporta el video.
+          </video>
+        </div>
+      </div>
+
+      <!-- LADO DERECHO: TEXTO -->
+      <div class="contenido-info">
+        <h3>ASESORÍA PARA MODALIDAD 40</h3>
+        <p>Si cuentas con:</p>
+        <ul class="lista-condiciones">
+          <li>
+            <ion-icon name="checkmark-circle-outline"></ion-icon> 60 años o más
+          </li>
+          <li>
+            <ion-icon name="checkmark-circle-outline"></ion-icon> Mínimo 1,000
+            semanas cotizadas
+          </li>
+          <li>
+            <ion-icon name="checkmark-circle-outline"></ion-icon> 1 años sin
+            cotizar
+          </li>
+        </ul>
+        <p>
+          Financiamos tu modalidad 40 para mejorar
+          <strong>tu pensión a más de un 300%</strong>
+        </p>
+
+        <button class="btn-agendar">
+          Agendar asesoría <span class="flecha">→</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-unete">
+    <div class="contenedor-unete">
+      <!-- Imagen a la izquierda -->
+      <div class="imagen-unete">
+        <img src="assets/equipo-joli.png" alt="Equipo Joli" />
+      </div>
+
+      <!-- Contenido a la derecha -->
+      <div class="contenido-unete">
+        <h2>ÚNETE A NUESTRO EQUIPO</h2>
+        <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-unete" />
+        <p>
+          Somos una gran familia donde<br />
+          el éxito individual construye el<br />
+          éxito de todos
+        </p>
+        <button class="btn-unete">
+          Más información <span class="flecha">→</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div id="contacto">
+    <app-footer></app-footer>
+  </div>
+</ion-content>
