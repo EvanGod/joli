@@ -2,23 +2,28 @@
   <!-- BARRA SUPERIOR DE CONTACTO -->
   <div class="barra-contacto">
     <div class="contenedor-contacto">
-      <span>contacto&#64;joli.mx</span>
+      <span>comercial&#64;joli.com.mx</span>
       <span>Tel. 442 425 24 52</span>
     </div>
   </div>
 
+  <!-- BARRA DE NAVEGACIÓN -->
   <div class="barra-navegacion">
-    <a href="/inicio">
-      <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-joli" />
-    </a>
-    <nav class="menu-principal">
-      <a href="/nosotros">NOSOTROS</a>
-      <a class="selected" href="/pensiones">PENSIONES Y AFORE</a>
-      <a href="/seguros">SEGUROS</a>
-      <a href="/planes">PLANES DE RETIRO</a>
-      <a (click)="scrollTo('contacto')">CONTACTO</a>
-    </nav>
-  </div>
+  <a href="/inicio">
+    <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-joli" />
+  </a>
+
+  <button class="menu-toggle" (click)="menuAbierto = !menuAbierto">
+    <ion-icon name="menu-outline"></ion-icon>
+  </button>
+
+  <nav class="menu-principal" [class.abierto]="menuAbierto">
+    <a href="/nosotros">NOSOTROS</a>
+    <a class="selected" href="/pensiones">PENSIONES, AFORE <br /> Y MODALIDAD 40</a>
+    <a href="/seguros">SEGUROS</a>
+    <a (click)="scrollTo('contacto')">CONTACTO</a>
+  </nav>
+</div>
 
   <section class="seccion-banner-pension">
     <div class="overlay">
@@ -69,9 +74,12 @@
           <strong>tu pensión a más de un 300%</strong>
         </p>
 
-        <button class="btn-agendar">
+        <a class="btn-agendar"
+        href="https://wa.me/5214424252452?text=Hola,%20quiero%20agendar%20una%20cita%20para%20asesoría%20de%20Modalidad%2040"
+          target="_blank"
+          rel="noopener">
           Agendar asesoría <span class="flecha">→</span>
-        </button>
+        </a>
       </div>
     </div>
   </section>
@@ -80,7 +88,7 @@
     <div class="contenedor-unete">
       <!-- Imagen a la izquierda -->
       <div class="imagen-unete">
-        <img src="assets/equipo-joli.png" alt="Equipo Joli" />
+        <img src="assets/equipo-joli.jpg" alt="Equipo Joli" />
       </div>
 
       <!-- Contenido a la derecha -->
@@ -92,9 +100,14 @@
           el éxito individual construye el<br />
           éxito de todos
         </p>
-        <button class="btn-unete">
+        <a
+          class="btn-unete"
+          href="https://wa.me/5214425032094?text=Hola,%20estoy%20interesado%20en%20ser%20parte%20de%20Joli...%20me%20puedes%20dar%20más%20información?"
+          target="_blank"
+          rel="noopener"
+        >
           Más información <span class="flecha">→</span>
-        </button>
+        </a>
       </div>
     </div>
   </section>

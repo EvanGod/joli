@@ -10,6 +10,7 @@ import {
   logoInstagram,
   logoFacebook,
   logoLinkedin,
+  logoWhatsapp,
   callOutline,
   mailOutline,
   locationOutline,
@@ -21,13 +22,15 @@ import {
   airplaneOutline,
   personOutline,
   carOutline,
-  arrowForwardOutline
+  arrowForwardOutline,
+  menuOutline,
 } from 'ionicons/icons';
 
 addIcons({
   'logo-instagram': logoInstagram,
   'logo-facebook': logoFacebook,
   'logo-linkedin': logoLinkedin,
+  'logo-whatsapp': logoWhatsapp,
   'call-outline': callOutline,
   'mail-outline': mailOutline,
   'location-outline': locationOutline,
@@ -39,7 +42,8 @@ addIcons({
   'airplane-outline': airplaneOutline,
   'person-outline': personOutline,
   'car-outline': carOutline,
-  'arrow-forward-outline': arrowForwardOutline
+  'arrow-forward-outline': arrowForwardOutline,
+  'menu-outline': menuOutline
 });
 
 

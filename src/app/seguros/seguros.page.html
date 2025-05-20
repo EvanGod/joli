@@ -2,20 +2,25 @@
   <!-- BARRA SUPERIOR DE CONTACTO -->
   <div class="barra-contacto">
     <div class="contenedor-contacto">
-      <span>contacto&#64;joli.mx</span>
+      <span>comercial&#64;joli.com.mx</span>
       <span>Tel. 442 425 24 52</span>
     </div>
   </div>
 
+  <!-- BARRA DE NAVEGACIÓN -->
   <div class="barra-navegacion">
   <a href="/inicio">
     <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-joli" />
   </a>
-  <nav class="menu-principal">
+
+  <button class="menu-toggle" (click)="menuAbierto = !menuAbierto">
+    <ion-icon name="menu-outline"></ion-icon>
+  </button>
+
+  <nav class="menu-principal" [class.abierto]="menuAbierto">
     <a href="/nosotros">NOSOTROS</a>
-    <a href="/pensiones">PENSIONES Y AFORE</a>
+    <a href="/pensiones">PENSIONES, AFORE <br /> Y MODALIDAD 40</a>
     <a class="selected" href="/seguros">SEGUROS</a>
-    <a href="/planes">PLANES DE RETIRO</a>
     <a (click)="scrollTo('contacto')">CONTACTO</a>
   </nav>
 </div>
@@ -50,9 +55,9 @@
   <div class="contenedor-medica">
     <div class="card-medica">
       <img src="assets/medical.png" alt="Médica Total Plus" />
-      <a href="/assets/ficha-tecnica-medica-total.pdf" target="_blank" class="descargar-ficha">
+      <!-- <a href="/assets/ficha-tecnica-medica-total.pdf" target="_blank" class="descargar-ficha">
         DESCARGAR FICHA TÉCNICA
-      </a>
+      </a> -->
     </div>
 
     <div class="contenido-beneficios">
@@ -93,7 +98,7 @@
 
     <div class="imagen-empresa">
       <img src="assets/protege.png" alt="Protege a tu empresa" />
-      <a href="assets/ficha-hombre-clave.pdf" download class="ficha-tecnica">DESCARGAR FICHA TÉCNICA</a>
+      <!-- <a href="assets/ficha-hombre-clave.pdf" download class="ficha-tecnica">DESCARGAR FICHA TÉCNICA</a> -->
     </div>
   </div>
 </section>
@@ -102,7 +107,7 @@
     <div class="contenedor-unete">
       <!-- Imagen a la izquierda -->
       <div class="imagen-unete">
-        <img src="assets/equipo-joli.png" alt="Equipo Joli" />
+        <img src="assets/equipo-joli.jpg" alt="Equipo Joli" />
       </div>
 
       <!-- Contenido a la derecha -->
@@ -114,9 +119,14 @@
           el éxito individual construye el<br />
           éxito de todos
         </p>
-        <button class="btn-unete">
+        <a
+          class="btn-unete"
+          href="https://wa.me/5214425032094?text=Hola,%20estoy%20interesado%20en%20ser%20parte%20de%20Joli...%20me%20puedes%20dar%20más%20información?"
+          target="_blank"
+          rel="noopener"
+        >
           Más información <span class="flecha">→</span>
-        </button>
+        </a>
       </div>
     </div>
   </section>

@@ -30,17 +30,21 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-top: 1rem;
 
   ion-icon {
-    font-size: 28px;
-    color: white;
-    transition: transform 0.3s ease;
+    font-size: 40px;
+    color: #fefefe;
+    transition: color 0.3s ease;
 
     &:hover {
-      transform: scale(1.1);
+      color: #00cbe0;
     }
   }
 }
+
+
+
 
   }
 
@@ -113,3 +117,112 @@
   }
 }
 
+form button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #003b6f;
+  color: #fff;
+  border: solid 1px #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: #0056a0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .footer-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    padding: 2rem 1rem;
+    justify-items: center;
+    align-items: flex-start;
+  }
+
+  .col-logo,
+  .col-contacto {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: left;
+  }
+
+  .col-logo {
+    align-items: flex-start;
+
+    .logo-footer {
+      width: 70px;
+      margin: 0 auto 0.5rem auto;
+      display: block;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      text-align: left;
+      width: 100%;
+    }
+  }
+
+  .footer-contacto .col-logo .redes {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    width: 100%;
+
+    ion-icon {
+      font-size: 40px;
+      color: white;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .col-contacto {
+    align-items: flex-start;
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      text-align: center;
+      width: 100%;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+
+      li {
+        display: flex;
+        gap: 0.6rem;
+        align-items: flex-start;
+
+        ion-icon {
+          font-size: 20px;
+          margin-top: 2px;
+          flex-shrink: 0;
+        }
+
+        span {
+          font-size: 0.95rem;
+          line-height: 1.4;
+          display: block;
+        }
+      }
+    }
+  }
+}

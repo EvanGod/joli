@@ -2,29 +2,33 @@
   <!-- BARRA SUPERIOR DE CONTACTO -->
   <div class="barra-contacto">
     <div class="contenedor-contacto">
-      <span>contacto&#64;joli.mx</span>
+      <span>comercial&#64;joli.com.mx</span>
       <span>Tel. 442 425 24 52</span>
     </div>
   </div>
 
   <!-- BARRA DE NAVEGACIÓN -->
   <div class="barra-navegacion">
-    <a href="/inicio">
-      <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-joli" />
-    </a>
-    <nav class="menu-principal">
-      <a class="selected" href="/nosotros">NOSOTROS</a>
-      <a href="/pensiones">PENSIONES Y AFORE</a>
-      <a href="/seguros">SEGUROS</a>
-      <a href="/planes">PLANES DE RETIRO</a>
-      <a (click)="scrollTo('contacto')">CONTACTO</a>
-    </nav>
-  </div>
+  <a href="/inicio">
+    <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-joli" />
+  </a>
+
+  <button class="menu-toggle" (click)="menuAbierto = !menuAbierto">
+    <ion-icon name="menu-outline"></ion-icon>
+  </button>
+
+  <nav class="menu-principal" [class.abierto]="menuAbierto">
+    <a class="selected" href="/nosotros">NOSOTROS</a>
+    <a href="/pensiones">PENSIONES, AFORE <br /> Y MODALIDAD 40</a>
+    <a href="/seguros">SEGUROS</a>
+    <a (click)="scrollTo('contacto')">CONTACTO</a>
+  </nav>
+</div>
 
   <!-- HERO NOSOTROS -->
   <div class="hero-nosotros">
     <div class="overlay">
-      <!-- <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-nosotros" /> -->
+      <img src="assets/joli_blanco.png" alt="Logo Joli" class="logo-nosotros" />
       <h1>
         Especialistas en estrategias de<br />
         incremento de pensión, retiro,<br />
@@ -34,126 +38,139 @@
   </div>
 
   <section class="seccion-experiencia">
-  <h2 class="mensaje-superior">
-    Ayudamos a nuestros clientes a <strong>construir un futuro</strong><br />
-    financiero seguro y estable.
-  </h2>
+    <h2 class="mensaje-superior">
+      Ayudamos a nuestros clientes a <strong>construir un futuro</strong><br />
+      financiero seguro y estable.
+    </h2>
 
-  <div class="contenedor-experiencia">
-    <!-- Imagen -->
-    <div class="columna-imagen">
-      <img src="assets/manos.jpg" alt="Equipo Joli unido" />
+    <div class="contenedor-experiencia">
+      <!-- Imagen -->
+      <div class="columna-imagen">
+        <img src="assets/manos.jpg" alt="Equipo Joli unido" />
+      </div>
+
+      <!-- Texto -->
+      <div class="columna-texto">
+        <h3 class="titulo-azul">MÁS DE 15 AÑOS<br />DE EXPERIENCIA</h3>
+        <p>
+          Con un gran equipo de asesores certificados listos para brindar la
+          mejor asesoría financiera y más de
+          <strong>15 años de experiencia</strong> hemos logrado ser reconocidos
+          por nuestros socios comerciales a nivel nacional, logrando un impacto
+          positivo en la vida de cada cliente.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <!-- Texto -->
-    <div class="columna-texto">
-      <h3 class="titulo-azul">MÁS DE 15 AÑOS<br />DE EXPERIENCIA</h3>
+  <section class="seccion-mvv">
+    <div class="card-mvv">
+      <div class="icono-circular">
+        <ion-icon name="flag-outline"></ion-icon>
+      </div>
+      <h3>Misión</h3>
       <p>
-        Con un gran equipo de asesores certificados listos para brindar la mejor asesoría financiera y
-        más de <strong>15 años de experiencia</strong> hemos logrado ser reconocidos por nuestros socios
-        comerciales a nivel nacional, logrando un impacto positivo en la vida de cada cliente.
+        Transformar el futuro financiero de nuestros clientes mediante la
+        asesoría y orientación sobre estrategias de pensiones, retiro,
+        protección o inversión. Estamos comprometidos a encontrar las soluciones
+        estratégicas más factibles para sus necesidades y objetivos financieros.
       </p>
     </div>
-  </div>
-</section>
 
-<section class="seccion-mvv">
-  <div class="card-mvv">
-    <div class="icono-circular">
-      <ion-icon name="flag-outline"></ion-icon>
-    </div>
-    <h3>Misión</h3>
-    <p>
-      Transformar el futuro financiero de nuestros clientes mediante la asesoría y orientación sobre estrategias de pensiones, retiro, protección o inversión.
-      Estamos comprometidos a encontrar las soluciones estratégicas más factibles para sus necesidades y objetivos financieros.
-    </p>
-  </div>
-
-  <div class="card-mvv">
-    <div class="icono-circular">
-      <ion-icon name="eye-outline"></ion-icon>
-    </div>
-    <h3>Visión</h3>
-    <p>
-      Ser reconocidos en a nivel nacional como una empresa líder en asesoría financiera por lograr mejorar el retiro y pensión de los mexicanos.
-    </p>
-  </div>
-
-  <div class="card-mvv">
-    <div class="icono-circular">
-      <ion-icon name="diamond-outline"></ion-icon>
-    </div>
-    <h3>Valores</h3>
-    <ul class="valores-lista">
-      <li><ion-icon name="checkmark-circle-outline"></ion-icon> Honestidad</li>
-      <li><ion-icon name="checkmark-circle-outline"></ion-icon> Compromiso</li>
-      <li><ion-icon name="checkmark-circle-outline"></ion-icon> Responsabilidad</li>
-      <li><ion-icon name="checkmark-circle-outline"></ion-icon> Justicia</li>
-    </ul>
-  </div>
-</section>
-
-<section class="seccion-aliados">
-  <h2 class="titulo-aliados">NUESTROS ALIADOS</h2>
-  <div class="grid-aliados">
-    <img src="assets/aliados/skandia.png" alt="Skandia" />
-    <img src="assets/aliados/carobra.png" alt="Carobra" />
-    <img src="assets/aliados/mapfre.png" alt="Mapfre" />
-    <img src="assets/aliados/bupa.png" alt="Bupa" />
-    <img src="assets/aliados/hdi.png" alt="HDI Seguros" />
-    <img src="assets/aliados/infonavit.png" alt="Infonavit" />
-  </div>
-</section>
-
-<section class="logros-2024">
-  <div class="fondo-azul">
-    <h2>LOGROS DEL 2024</h2>
-  </div>
-
-  <div class="contenedor-logros">
-    <div class="card-logro">
-      <h3>1° LUGAR</h3>
-      <p>Saldo venta Afore.<br /><strong>+50 millones.</strong></p>
-      <img src="assets/aliados/principal.png" alt="Principal" />
+    <div class="card-mvv">
+      <div class="icono-circular">
+        <ion-icon name="eye-outline"></ion-icon>
+      </div>
+      <h3>Visión</h3>
+      <p>
+        Ser reconocidos en a nivel nacional como una empresa líder en asesoría
+        financiera por lograr mejorar el retiro y pensión de los mexicanos.
+      </p>
     </div>
 
-    <div class="card-logro">
-      <h3>1° NIVEL</h3>
-      <p>Nacional en venta de<br /><strong>Seguros de vida.</strong></p>
+    <div class="card-mvv">
+      <div class="icono-circular">
+        <ion-icon name="diamond-outline"></ion-icon>
+      </div>
+      <h3>Valores</h3>
+      <ul class="valores-lista">
+        <li>
+          <ion-icon name="checkmark-circle-outline"></ion-icon> Honestidad
+        </li>
+        <li>
+          <ion-icon name="checkmark-circle-outline"></ion-icon> Compromiso
+        </li>
+        <li>
+          <ion-icon name="checkmark-circle-outline"></ion-icon> Responsabilidad
+        </li>
+        <li><ion-icon name="checkmark-circle-outline"></ion-icon> Justicia</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion-aliados">
+    <h2 class="titulo-aliados">NUESTROS ALIADOS</h2>
+    <div class="grid-aliados">
+      <img src="assets/aliados/skandia.png" alt="Skandia" />
+      <img src="assets/aliados/carobra.png" alt="Carobra" />
       <img src="assets/aliados/mapfre.png" alt="Mapfre" />
+      <img src="assets/aliados/bupa.png" alt="Bupa" />
+      <img src="assets/aliados/hdi.png" alt="HDI Seguros" />
+      <img src="assets/aliados/infonavit.png" alt="Infonavit" />
+    </div>
+  </section>
+
+  <section class="logros-2024">
+    <div class="fondo-azul">
+      <h2>LOGROS DEL 2024</h2>
     </div>
 
-    <div class="card-logro">
-      <h3>+ 500</h3>
-      <p>Clientes han<br /><strong>incrementado su pensión</strong></p>
-    </div>
-  </div>
-</section>
+    <div class="contenedor-logros">
+      <div class="card-logro">
+        <h3>1° LUGAR</h3>
+        <p>Saldo venta Afore.<br /><strong>+50 millones.</strong></p>
+        <img src="assets/aliados/principal.png" alt="Principal" />
+      </div>
 
-<section class="seccion-unete">
-  <div class="contenedor-unete">
-    <!-- Imagen a la izquierda -->
-    <div class="imagen-unete">
-      <img src="assets/equipo-joli.png" alt="Equipo Joli" />
-    </div>
+      <div class="card-logro">
+        <h3>1° NIVEL</h3>
+        <p>Nacional en venta de<br /><strong>Seguros de vida.</strong></p>
+        <img src="assets/aliados/mapfre.png" alt="Mapfre" />
+      </div>
 
-    <!-- Contenido a la derecha -->
-    <div class="contenido-unete">
-      <h2>ÚNETE A NUESTRO EQUIPO</h2>
-      <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-unete" />
-      <p>
-        Somos una gran familia donde<br />
-        el éxito individual construye el<br />
-        éxito de todos
-      </p>
-      <button class="btn-unete">
-        Más información <span class="flecha">→</span>
-      </button>
+      <div class="card-logro">
+        <h3>+ 500</h3>
+        <p>Clientes han<br /><strong>incrementado su pensión</strong></p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- FOOTER -->
+  <section class="seccion-unete">
+    <div class="contenedor-unete">
+      <div class="imagen-unete">
+        <img src="assets/equipo-joli.jpg" alt="Equipo Joli" />
+      </div>
+
+      <div class="contenido-unete">
+        <h2>ÚNETE A NUESTRO EQUIPO</h2>
+        <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-unete" />
+        <p>
+          Somos una gran familia donde<br />
+          el éxito individual construye el<br />
+          éxito de todos
+        </p>
+        <a
+          class="btn-unete"
+          href="https://wa.me/5214425032094?text=Hola,%20estoy%20interesado%20en%20ser%20parte%20de%20Joli...%20me%20puedes%20dar%20más%20información?"
+          target="_blank"
+          rel="noopener"
+        >
+          Más información <span class="flecha">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <div id="contacto">
     <app-footer></app-footer>
   </div>

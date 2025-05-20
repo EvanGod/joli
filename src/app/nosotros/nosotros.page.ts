@@ -22,7 +22,7 @@ import {
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, FooterComponent, IonButtons, IonButton, IonIcon],
 })
 export class NosotrosPage implements OnInit {
-
+menuAbierto: boolean = false;
   constructor() { }
 
   ngOnInit() {

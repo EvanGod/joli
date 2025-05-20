@@ -28,6 +28,14 @@
         height: 60px;
     }
 
+    .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #003b6f;
+  }
+
     .menu-principal {
         display: flex;
         gap: 2rem;
@@ -55,22 +63,31 @@
 
 .seccion-seguros {
   position: relative;
-  background: url('/assets/familia.jpg') no-repeat center center / cover;
-  padding: 0; 
-  
+  width: 100%;
+  padding: 0;
+  background-color: #000; // fallback si no carga la imagen
 
   .overlay-seguros {
-    background: linear-gradient(to right, rgba(0, 200, 255, 0.4), rgba(0, 56, 122, 0.4));
-    padding: 4rem 1rem 8rem; 
+    background: linear-gradient(
+        to right,
+        rgba(0, 200, 255, 0.4),
+        rgba(0, 56, 122, 0.4)
+      ),
+      url('/assets/familia.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 4rem 1rem;
     text-align: center;
     color: white;
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px;
+    height: 600px;
 
     h2 {
       font-size: 2rem;
       font-weight: 600;
-      margin-bottom: 0;
-      margin-top: 125px;
+      margin: 0;
     }
   }
 
@@ -306,7 +323,7 @@
 
     img {
       width: 100%;
-      max-width: 1200px;
+      max-width: 400px;
       height: auto;
       object-fit: contain;
     }
@@ -362,4 +379,181 @@
       }
     }
   }
+}
+
+
+@media (max-width: 768px) {
+
+  // Barra de contacto
+  .barra-contacto {
+    font-size: 12px;
+
+    .contenedor-contacto {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+
+  // Barra de navegación (Header)
+  .barra-navegacion {
+    flex-wrap: wrap;
+
+    .menu-toggle {
+      display: block;
+    }
+
+    .menu-principal {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+      gap: 1rem;
+
+      a {
+        padding: 10px;
+        font-size: 1rem;
+        border-top: 1px solid #eee;
+      }
+
+      &.abierto {
+        display: flex;
+      }
+    }
+  }
+
+  .seccion-unete {
+    .contenedor-unete {
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .imagen-unete{
+        display:none
+    }
+    .imagen-unete,
+    .contenido-unete {
+      flex: 1 1 100%;
+      max-width: 60%;
+    }
+
+    .contenido-unete {
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  // Sección SEGUROS
+.seccion-seguros {
+    .overlay-seguros {
+      padding: 3rem 1rem 4rem;
+      height: auto; // ✅ Ajuste importante
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        font-size: 1.3rem;
+        margin-top: 0;
+      }
+    }
+
+  .contenedor-tarjetas {
+    margin-top: -3rem;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+
+    .tarjeta-seguro {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+}
+
+// Sección MÉDICA TOTAL
+.seccion-medica-total {
+  padding: 3rem 1rem;
+
+  .contenedor-medica {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .card-medica,
+    .contenido-beneficios {
+      max-width: 100%;
+    }
+
+    .contenido-beneficios {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
+
+  h3 {
+    color: #0041aa;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 1.2rem; 
+    text-align: left; 
+
+    li {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+      color: black;
+    }
+  }
+
+  .btn-contactar {
+    margin-top: 2rem;
+  }
+}
+
+  }
+}
+
+// Sección EMPRESA
+.seccion-empresa {
+  padding: 3rem 1rem;
+
+  .contenido-empresa {
+    flex-direction: column;
+    text-align: center;
+
+    .texto-empresa {
+      text-align: center;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      ul li {
+        font-size: 0.95rem;
+      }
+    }
+
+    .imagen-empresa img {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
 }

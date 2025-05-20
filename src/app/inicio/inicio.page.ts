@@ -10,7 +10,8 @@ import {
   IonTitle,
   IonToolbar,
   IonButtons,
-  IonButton
+  IonButton,
+  IonIcon
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -27,16 +28,19 @@ import {
     IonButton,
     CommonModule,
     FormsModule,
-    FooterComponent
+    FooterComponent,
+    IonIcon
   ]
 })
 export class InicioPage implements OnInit {
   imagenesCarrusel: string[] = [
-    'assets/banner-home.webp',
-    'assets/banner-home.webp'
+    'assets/banner-home.jpg',
+    'assets/banner-home.jpg'
   ];
 
   imagenActual: number = 0;
+  menuAbierto: boolean = false;
+
 
   ngOnInit() {
     setInterval(() => {

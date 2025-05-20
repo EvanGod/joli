@@ -12,6 +12,8 @@
         justify-content: flex-end;
         gap: 2rem;
     }
+
+    
 }
 
 
@@ -23,6 +25,14 @@
     padding: 14px 5%;
     background-color: white;
     border-bottom: 1px solid #ddd;
+
+    .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #003b6f;
+  }
 
     .logo-joli {
         height: 60px;
@@ -55,11 +65,12 @@
 
 .nosotros {
   --background: transparent;
+  width: 100%;
 
   .hero-nosotros {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 75%;
     background: url('/assets/personas.webp') no-repeat center center;
     background-size: cover;
     display: flex;
@@ -72,7 +83,7 @@
     rgba(0, 187, 215, 0.55), 
     rgba(0, 57, 122, 0.4)     
   );
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   color: white;
   width: 100%;
@@ -99,7 +110,7 @@
 }
 
 .seccion-experiencia {
-  padding: 4rem 5%;
+  padding: 1rem 5%;
   background-color: white;
   text-align: center;
 
@@ -107,6 +118,7 @@
     font-size: 1.3rem;
     margin-bottom: 3rem;
     font-weight: 400;
+    color: black;
 
     strong {
       font-weight: 700;
@@ -345,7 +357,7 @@
 
     img {
       width: 100%;
-      max-width: 1200px;
+      max-width: 400px;
       height: auto;
       object-fit: contain;
     }
@@ -401,4 +413,210 @@
       }
     }
   }
+}
+
+@media (max-width: 768px) {
+
+  // Barra de contacto
+  .barra-contacto {
+    font-size: 12px;
+
+    .contenedor-contacto {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+
+  // Barra de navegación (Header)
+  .barra-navegacion {
+    flex-wrap: wrap;
+
+    .menu-toggle {
+      display: block;
+    }
+
+    .menu-principal {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+      gap: 1rem;
+
+      a {
+        padding: 10px;
+        font-size: 1rem;
+        border-top: 1px solid #eee;
+      }
+
+      &.abierto {
+        display: flex;
+      }
+    }
+  }
+
+  .nosotros {
+  .hero-nosotros {
+    height: 380px; // 🔽 Altura menor en móvil
+    background-position: center top;
+
+    .overlay {
+      padding: 1.5rem 1rem;
+
+      h1 {
+        font-size: 1.3rem;
+        max-width: 90%;
+        line-height: 1.4;
+      }
+
+      .logo-nosotros {
+        width: 80px;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.seccion-experiencia {
+  padding: 2.5rem 1.5rem;
+
+  .mensaje-superior {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contenedor-experiencia {
+    flex-direction: column;
+    gap: 2rem;
+
+    .columna-imagen {
+      flex: 1 1 100%;
+    }
+
+    .columna-texto {
+      flex: 1 1 100%;
+
+      .titulo-azul {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.seccion-mvv {
+  padding: 3rem 1.5rem;
+  flex-direction: column;
+  align-items: center;
+
+  .card-mvv {
+    max-width: 100%;
+    padding: 1.5rem;
+    width: 100%;
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+
+    .valores-lista li {
+      font-size: 0.95rem;
+    }
+
+    .icono-circular {
+      width: 60px;
+      height: 60px;
+
+      ion-icon {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.seccion-aliados {
+  padding: 3rem 1.5rem;
+
+  .titulo-aliados {
+    font-size: 1.4rem;
+  }
+
+  .grid-aliados {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+
+    img {
+      width: 90px;
+    }
+  }
+}
+
+.logros-2024 {
+  .fondo-azul {
+    padding: 2.5rem 1rem 5rem;
+
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .contenedor-logros {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .card-logro {
+    width: 100%;
+    padding: 1.5rem;
+    height: auto;
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+
+    img {
+      width: 80px;
+    }
+  }
+}
+
+.seccion-unete {
+    .contenedor-unete {
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .imagen-unete{
+        display:none
+    }
+    .imagen-unete,
+    .contenido-unete {
+      flex: 1 1 100%;
+      max-width: 60%;
+    }
+
+    .contenido-unete {
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+
 }

@@ -22,6 +22,8 @@ import {
 })
 export class SegurosPage implements OnInit {
 
+  menuAbierto: boolean = false;
+  
   constructor() { }
 
   ngOnInit() {

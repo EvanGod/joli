@@ -22,6 +22,8 @@ import {
 })
 export class PensionesPage implements OnInit {
 
+  menuAbierto: boolean = false;
+  
   constructor() { }
 
   ngOnInit() {

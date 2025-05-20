@@ -24,6 +24,14 @@
     background-color: white;
     border-bottom: 1px solid #ddd;
 
+    .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #003b6f;
+  }
+
     .logo-joli {
         height: 60px;
     }
@@ -57,7 +65,7 @@
 .seccion-banner-pension {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 80%;
   background: url('/assets/viejitos2.jpg') no-repeat center center;
   background-size: cover;
 
@@ -119,7 +127,7 @@
 
     img {
       width: 100%;
-      max-width: 1200px;
+      max-width: 400px;
       height: auto;
       object-fit: contain;
     }
@@ -277,3 +285,156 @@
     }
   }
 }
+
+
+@media (max-width: 768px) {
+
+  // Barra de contacto
+  .barra-contacto {
+    font-size: 12px;
+
+    .contenedor-contacto {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+
+  // Barra de navegación (Header)
+  .barra-navegacion {
+    flex-wrap: wrap;
+
+    .menu-toggle {
+      display: block;
+    }
+
+    .menu-principal {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+      gap: 1rem;
+
+      a {
+        padding: 10px;
+        font-size: 1rem;
+        border-top: 1px solid #eee;
+      }
+
+      &.abierto {
+        display: flex;
+      }
+    }
+  }
+
+.seccion-unete {
+    .contenedor-unete {
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .imagen-unete{
+        display:none
+    }
+    .imagen-unete,
+    .contenido-unete {
+      flex: 1 1 100%;
+      max-width: 60%;
+    }
+
+    .contenido-unete {
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+
+  // Banner con fondo en pensiones
+.seccion-banner-pension {
+  height: 360px;
+
+  .overlay {
+    padding: 1.5rem;
+    align-items: flex-end;
+
+    .contenido-banner {
+      h2 {
+        font-size: 1.6rem;
+        line-height: 1.4;
+      }
+
+      .etiqueta-modalidad {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+    }
+  }
+}
+
+// Sección Modalidad 40
+.seccion-modalidad40 {
+  padding: 3rem 1.2rem;
+
+  .contenedor-modalidad {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-contenedor {
+    flex: 1 1 100%;
+
+    .marco-video {
+      padding: 4px;
+      border: 6px solid #003b6f;
+
+      video {
+        max-width: auto;
+      }
+    }
+  }
+
+  .contenido-info {
+    flex: 1 1 100%;
+    text-align: center;
+    align-items: center;
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+
+    .lista-condiciones {
+      li {
+        justify-content: center;
+        font-size: 0.95rem;
+
+        ion-icon {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .btn-agendar {
+      align-self: center;
+      font-size: 0.95rem;
+      padding: 10px 20px;
+
+      .flecha {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+}
+
+  
