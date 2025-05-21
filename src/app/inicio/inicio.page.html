@@ -50,7 +50,7 @@
     <div class="contenedor-presentacion">
       <!-- Imagen con caja superpuesta -->
       <div class="imagen-presentacion">
-        <img src="assets/viejito1.png" alt="Adulto mayor asesorado" />
+        <img src="assets/viejito1.jpeg" alt="Adulto mayor asesorado" />
         <div class="texto-superpuesto">
           <p>
             Más de 1,000 personas<br /><strong
@@ -85,7 +85,7 @@
       </a>
 
       <!-- Tarjeta 2 -->
-      <a class="card-servicio fondo-2" href="/planes">
+      <a class="card-servicio fondo-2" >
         <h3>PLAN PERSONAL<br />DE RETIRO</h3>
         <div class="icono-mas">+</div>
       </a>
@@ -110,35 +110,25 @@
     </div>
 
     <div class="contenedor-testimonios">
-      <!-- Testimonio 1 -->
-      <div class="card-testimonio">
-        <h3>Guadalupe Pérez</h3>
-        <p>
-          SUPER RECOMIENDO!!! Excelente atención!! Financiaron mi modalidad 40,
-          trámite sencillo, información transparente y profesionalismo. Muy
-          satisfecha!
-        </p>
-      </div>
+  <!-- Versión Escritorio -->
+  <div class="card-testimonio" *ngFor="let t of testimonios; let i = index" id="testimonio-desktop">
+    <h3>{{ t.nombre }}</h3>
+    <p>{{ t.mensaje }}</p>
+  </div>
 
-      <!-- Testimonio 2 -->
-      <div class="card-testimonio">
-        <h3>lvmendoz Vázquez</h3>
-        <p>
-          Excelente servicio, atención personalizada, jamás te dejan solo,
-          resuelven todas, todas tus dudas y lo mejor, te dan esa confianza que
-          se requiere al 100%. Totalmente recomendables.
-        </p>
-      </div>
+  <!-- Versión Carrusel Móvil -->
+  <div class="carrusel-movil">
+    <button class="btn-carrusel" (click)="cambiarTestimonio('anterior')">‹</button>
 
-      <!-- Testimonio 3 -->
-      <div class="card-testimonio">
-        <h3>Luis Bernardo Arellano Eguiza</h3>
-        <p>
-          Más que asesores, buenos seres humanos. Muy profesionales. Los
-          recomiendo enteramente. Sigan así ...
-        </p>
-      </div>
+    <div class="card-testimonio">
+      <h3>{{ testimonios[testimonioActual].nombre }}</h3>
+      <p>{{ testimonios[testimonioActual].mensaje }}</p>
     </div>
+
+    <button class="btn-carrusel" (click)="cambiarTestimonio('siguiente')">›</button>
+  </div>
+</div>
+
   </section>
 
   <section class="seccion-unete">
@@ -150,13 +140,17 @@
 
       <!-- Contenido a la derecha -->
       <div class="contenido-unete">
-        <h2>ÚNETE A NUESTRO EQUIPO</h2>
-        <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-unete" />
+        <h2>¡ÚNETE A NUESTRO EQUIPO!</h2>
+
+        <!-- <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-unete" /> -->
         <p>
           Somos una gran familia donde<br />
           el éxito individual construye el<br />
           éxito de todos
         </p>
+        <p>
+  <strong>Buscamos asesores de seguros y asesores de AFORE.</strong>
+</p>
         <a
           class="btn-unete"
           href="https://wa.me/5214425032094?text=Hola,%20estoy%20interesado%20en%20ser%20parte%20de%20Joli...%20me%20puedes%20dar%20más%20información?"

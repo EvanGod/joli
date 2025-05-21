@@ -58,4 +58,31 @@ export class InicioPage implements OnInit {
     }
   }
 
+  testimonioActual: number = 0;
+
+testimonios: any[] = [
+  {
+    nombre: 'Guadalupe Pérez',
+    mensaje: 'SUPER RECOMIENDO!!! Excelente atención!! Financiaron mi modalidad 40, trámite sencillo, información transparente y profesionalismo. Muy satisfecha!'
+  },
+  {
+    nombre: 'lvmendoz Vázquez',
+    mensaje: 'Excelente servicio, atención personalizada, jamás te dejan solo, resuelven todas tus dudas y lo mejor, te dan esa confianza que se requiere al 100%.'
+  },
+  {
+    nombre: 'Luis Bernardo Arellano Eguiza',
+    mensaje: 'Más que asesores, buenos seres humanos. Muy profesionales. Los recomiendo enteramente. Sigan así ...'
+  }
+];
+
+cambiarTestimonio(direccion: 'anterior' | 'siguiente') {
+  if (direccion === 'anterior') {
+    this.testimonioActual =
+      (this.testimonioActual - 1 + this.testimonios.length) % this.testimonios.length;
+  } else {
+    this.testimonioActual = (this.testimonioActual + 1) % this.testimonios.length;
+  }
+}
+
+
 }

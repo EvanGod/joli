@@ -65,7 +65,7 @@
 /* HERO/BANNER */
 .hero-banner {
     width: 100%;
-    height: 80%;
+    height: 550px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -336,6 +336,20 @@
     gap: 2rem;
   }
 
+  .carrusel-movil {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  .btn-carrusel {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }}
+
   .card-testimonio {
     background-color: white;
     border: 2px solid #00c8e0;
@@ -527,7 +541,7 @@
 
     img {
       width: 100%;
-      max-width: 170px; 
+      max-width: 220px; 
       height: auto;
       border-radius: 10px;
       object-fit: cover;
@@ -539,13 +553,13 @@
 //   margin-top: 1.5rem;
 //   background-color: #002f6c;
 //   color: white;
-//   padding: 0.8rem 1rem; 
-//   font-size: 0.85rem;    
-//   line-height: 1.3;      
+//   padding: 0.8rem 1rem; // ✅ menos padding
+//   font-size: 0.85rem;    // ✅ tamaño de fuente más pequeño
+//   line-height: 1.3;      // ✅ menor separación de líneas
 //   text-align: center;
 //   border-radius: 10px;
 //   width: 80%;
-//   max-width: 220px;      
+//   max-width: 220px;      // ✅ más estrecho
 //   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 //   font-weight: 400;
 display: none;
@@ -630,6 +644,15 @@ display: none;
   // Sección Testimonios
   .seccion-testimonios {
     padding: 3rem 1rem;
+
+     #testimonio-desktop {
+    display: none !important;
+  }
+
+  .carrusel-movil {
+    display: flex !important;
+    flex-direction: row;
+  }
 
     .encabezado-testimonios h2 {
       font-size: 1.3rem;
