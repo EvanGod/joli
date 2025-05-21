@@ -37,4 +37,34 @@ menuAbierto: boolean = false;
       this.contenido.scrollToPoint(0, y - 80, 500); 
     }
   }
+
+  mvvActual: number = 0;
+
+tarjetasMVV = [
+  {
+    titulo: 'Misión',
+    icono: 'flag-outline',
+    descripcion: `Transformar el futuro financiero de nuestros clientes mediante la asesoría y orientación sobre estrategias de pensiones, retiro, protección o inversión. Estamos comprometidos a encontrar las soluciones estratégicas más factibles para sus necesidades y objetivos financieros.`
+  },
+  {
+    titulo: 'Visión',
+    icono: 'eye-outline',
+    descripcion: `Ser reconocidos a nivel nacional como una empresa líder en asesoría financiera por lograr mejorar el retiro y pensión de los mexicanos.`
+  },
+  {
+    titulo: 'Valores',
+    icono: 'diamond-outline',
+    valores: ['Honestidad', 'Compromiso', 'Responsabilidad', 'Justicia']
+  }
+];
+
+cambiarMVV(direccion: 'anterior' | 'siguiente') {
+  const total = this.tarjetasMVV.length;
+  if (direccion === 'anterior') {
+    this.mvvActual = (this.mvvActual - 1 + total) % total;
+  } else {
+    this.mvvActual = (this.mvvActual + 1) % total;
+  }
+}
+
 }

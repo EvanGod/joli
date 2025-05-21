@@ -9,21 +9,24 @@
 
   <!-- BARRA DE NAVEGACIÓN -->
   <div class="barra-navegacion">
-  <a href="/inicio">
-    <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-joli" />
-  </a>
+    <a href="/inicio">
+      <img src="assets/joli_logo.jpg" alt="Logo Joli" class="logo-joli" />
+    </a>
 
-  <button class="menu-toggle" (click)="menuAbierto = !menuAbierto">
-    <ion-icon name="menu-outline"></ion-icon>
-  </button>
+    <button class="menu-toggle" (click)="menuAbierto = !menuAbierto">
+      <ion-icon name="menu-outline"></ion-icon>
+    </button>
 
-  <nav class="menu-principal" [class.abierto]="menuAbierto">
-    <a class="selected" href="/nosotros">NOSOTROS</a>
-    <a href="/pensiones">PENSIONES, AFORE <br /> Y MODALIDAD 40</a>
-    <a href="/seguros">SEGUROS</a>
-    <a (click)="scrollTo('contacto')">CONTACTO</a>
-  </nav>
-</div>
+    <nav class="menu-principal" [class.abierto]="menuAbierto">
+      <a class="selected" href="/nosotros">NOSOTROS</a>
+      <a href="/pensiones"
+        >PENSIONES, AFORE <br />
+        Y MODALIDAD 40</a
+      >
+      <a href="/seguros">SEGUROS</a>
+      <a (click)="scrollTo('contacto')">CONTACTO</a>
+    </nav>
+  </div>
 
   <!-- HERO NOSOTROS -->
   <div class="hero-nosotros">
@@ -46,7 +49,7 @@
     <div class="contenedor-experiencia">
       <!-- Imagen -->
       <div class="columna-imagen">
-        <img src="assets/manos.jpg" alt="Equipo Joli unido" />
+        <img src="assets/manos.jpeg" alt="Equipo Joli unido" />
       </div>
 
       <!-- Texto -->
@@ -64,47 +67,44 @@
   </section>
 
   <section class="seccion-mvv">
-    <div class="card-mvv">
-      <div class="icono-circular">
-        <ion-icon name="flag-outline"></ion-icon>
+    <!-- Carrusel móvil -->
+    <div class="carrusel-mvv">
+      <button class="btn-carrusel" (click)="cambiarMVV('anterior')">‹</button>
+
+      <div class="card-mvv" *ngIf="tarjetasMVV[mvvActual] as tarjeta">
+        <div class="icono-circular">
+          <ion-icon [name]="tarjeta.icono"></ion-icon>
+        </div>
+        <div class="contenido-mvv">
+          <h3>{{ tarjeta.titulo }}</h3>
+          <p *ngIf="!tarjeta.valores">{{ tarjeta.descripcion }}</p>
+          <ul class="valores-lista" *ngIf="tarjeta.valores">
+            <li *ngFor="let valor of tarjeta.valores">
+              <ion-icon name="checkmark-circle-outline"></ion-icon> {{ valor }}
+            </li>
+          </ul>
+        </div>
       </div>
-      <h3>Misión</h3>
-      <p>
-        Transformar el futuro financiero de nuestros clientes mediante la
-        asesoría y orientación sobre estrategias de pensiones, retiro,
-        protección o inversión. Estamos comprometidos a encontrar las soluciones
-        estratégicas más factibles para sus necesidades y objetivos financieros.
-      </p>
+
+      <button class="btn-carrusel" (click)="cambiarMVV('siguiente')">›</button>
     </div>
 
-    <div class="card-mvv">
-      <div class="icono-circular">
-        <ion-icon name="eye-outline"></ion-icon>
+    <!-- Versión escritorio -->
+    <div class="mvv-desktop">
+      <div class="card-mvv" *ngFor="let tarjeta of tarjetasMVV">
+        <div class="icono-circular">
+          <ion-icon [name]="tarjeta.icono"></ion-icon>
+        </div>
+        <div class="contenido-mvv">
+          <h3>{{ tarjeta.titulo }}</h3>
+          <p *ngIf="!tarjeta.valores">{{ tarjeta.descripcion }}</p>
+          <ul class="valores-lista" *ngIf="tarjeta.valores">
+            <li *ngFor="let valor of tarjeta.valores">
+              <ion-icon name="checkmark-circle-outline"></ion-icon> {{ valor }}
+            </li>
+          </ul>
+        </div>
       </div>
-      <h3>Visión</h3>
-      <p>
-        Ser reconocidos en a nivel nacional como una empresa líder en asesoría
-        financiera por lograr mejorar el retiro y pensión de los mexicanos.
-      </p>
-    </div>
-
-    <div class="card-mvv">
-      <div class="icono-circular">
-        <ion-icon name="diamond-outline"></ion-icon>
-      </div>
-      <h3>Valores</h3>
-      <ul class="valores-lista">
-        <li>
-          <ion-icon name="checkmark-circle-outline"></ion-icon> Honestidad
-        </li>
-        <li>
-          <ion-icon name="checkmark-circle-outline"></ion-icon> Compromiso
-        </li>
-        <li>
-          <ion-icon name="checkmark-circle-outline"></ion-icon> Responsabilidad
-        </li>
-        <li><ion-icon name="checkmark-circle-outline"></ion-icon> Justicia</li>
-      </ul>
     </div>
   </section>
 
@@ -129,18 +129,32 @@
       <div class="card-logro">
         <h3>1° LUGAR</h3>
         <p>Saldo venta Afore.<br /><strong>+50 millones.</strong></p>
-        <img src="assets/aliados/principal.png" alt="Principal" />
+        <!-- <img src="assets/aliados/principal.png" alt="Principal" /> -->
+        <img class="logro-extra" src="assets/logros/logro4.jpg" alt="Afore" />
       </div>
 
       <div class="card-logro">
+
         <h3>1° NIVEL</h3>
         <p>Nacional en venta de<br /><strong>Seguros de vida.</strong></p>
-        <img src="assets/aliados/mapfre.png" alt="Mapfre" />
+        <!-- <img  src="assets/aliados/mapfre.png" alt="Premio LATAM" /> -->
+        <img class="logro-extra" src="assets/logros/logro2.jpeg" alt="Seguros de vida" />
       </div>
 
       <div class="card-logro">
         <h3>+ 500</h3>
         <p>Clientes han<br /><strong>incrementado su pensión</strong></p>
+        <img class="logro-extra" src="assets/logros/logro1.jpeg" alt="Pensión" />
+      </div>
+
+      <div class="card-logro">
+        <h3>1° Lugar LATAM</h3>
+        <p>
+          Reconocimiento por excelencia en<br /><strong
+            >asesoría de seguros de vida</strong
+          >
+        </p>
+        <img class="logro-extra" src="assets/logros/logro3.png" alt="Pensión" />
       </div>
     </div>
   </section>
@@ -161,8 +175,8 @@
           éxito de todos
         </p>
         <p>
-  <strong>Buscamos asesores de seguros y asesores de AFORE.</strong>
-</p>
+          <strong>Buscamos asesores de seguros y asesores de AFORE.</strong>
+        </p>
         <a
           class="btn-unete"
           href="https://wa.me/5214425032094?text=Hola,%20estoy%20interesado%20en%20ser%20parte%20de%20Joli...%20me%20puedes%20dar%20más%20información?"

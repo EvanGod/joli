@@ -39,41 +39,20 @@
 
     <div class="col-form">
       <p>Déjanos tus datos y un especialista se pondrá en contacto.</p>
-      <form
-        action="https://formsubmit.co/evang.barajas19@gmail.com"
-        method="POST"
-      >
-        <input
-          type="text"
-          name="nombre"
-          placeholder="NOMBRE COMPLETO"
-          required
-        />
-        <input
-          type="text"
-          name="telefono"
-          placeholder="NÚMERO DE CONTACTO"
-          required
-        />
-        <input
-          type="email"
-          name="correo"
-          placeholder="CORREO ELECTRÓNICO"
-          required
-        />
-        <select name="interes" required>
-          <option value="" disabled selected>ME INTERESA</option>
-          <option value="seguros">SEGUROS</option>
-          <option value="retiro">PLAN PERSONAL DE RETIRO</option>
-          <option value="afore">AFORE Y PENSIONES</option>
-          <option value="credito">CRÉDITO A PENSIONADOS</option>
-        </select>
+      <form (submit)="enviarWhatsApp($event)">
+  <input type="text" name="nombre" placeholder="NOMBRE COMPLETO" required />
+  <input type="text" name="telefono" placeholder="NÚMERO DE CONTACTO" required />
+  <input type="email" name="correo" placeholder="CORREO ELECTRÓNICO" required />
+  <select name="interes" required>
+    <option value="" disabled selected>ME INTERESA</option>
+    <option value="SEGUROS">SEGUROS</option>
+    <option value="PLAN PERSONAL DE RETIRO">PLAN PERSONAL DE RETIRO</option>
+    <option value="AFORE Y PENSIONES">AFORE Y PENSIONES</option>
+    <option value="CRÉDITO A PENSIONADOS">CRÉDITO A PENSIONADOS</option>
+  </select>
+  <button type="submit">ENVIAR</button>
+</form>
 
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" value="https://joli.com.mx/inicio" />
-
-        <button type="submit">ENVIAR</button>
-      </form>
     </div>
   </div>
 </footer>

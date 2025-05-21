@@ -461,7 +461,7 @@
   // Sección SEGUROS
 .seccion-seguros {
     .overlay-seguros {
-      padding: 3rem 1rem 4rem;
+      padding: 2rem 1rem 1rem;
       height: auto; // ✅ Ajuste importante
       min-height: 300px;
       display: flex;
@@ -475,7 +475,7 @@
     }
 
   .contenedor-tarjetas {
-    margin-top: -3rem;
+    // margin-top: -3rem;
     padding: 1.5rem 1rem;
     gap: 1rem;
 
