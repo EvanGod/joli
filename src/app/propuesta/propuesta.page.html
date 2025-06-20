@@ -1,0 +1,121 @@
+<ion-content class="ion-padding fondo-blanco">
+  <div class="contenedor-formulario">
+    <div class="columna-inputs">
+      <div class="logo-joli-container" (click)="irHomeConLoading()">
+        <img src="assets/joli_logo.jpg" alt="Logo JOLI" class="logo-joli" />
+      </div>
+
+      <form (ngSubmit)="calcular()" class="formulario-elegante">
+        <ion-item fill="outline">
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          <ion-label position="floating">Nombre del Prospecto</ion-label>
+          <ion-input
+            [(ngModel)]="nombre"
+            name="nombre"
+            required
+            (ngModelChange)="validarFormulario()"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline">
+          <ion-icon slot="start" name="cash-outline"></ion-icon>
+          <ion-label position="floating">Inversión Inicial</ion-label>
+          <ion-input
+            type="text"
+            [(ngModel)]="inversionInicialFormateada"
+            name="inversionInicial"
+            required
+            (ionBlur)="formatearInversion()"
+            (ionFocus)="quitarFormatoInversion()"
+            (ngModelChange)="validarFormulario()"
+          >
+          </ion-input>
+        </ion-item>
+
+        <ion-item fill="outline">
+          <ion-icon slot="start" name="calendar-number-outline"></ion-icon>
+          <ion-label position="floating">Tiempo en Años</ion-label>
+          <ion-input
+            type="number"
+            [(ngModel)]="anios"
+            name="anios"
+            required
+            (ngModelChange)="validarFormulario()"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item fill="outline">
+          <ion-icon slot="start" name="trending-up-outline"></ion-icon>
+          <ion-label position="floating">Tasa de Interés (%)</ion-label>
+          <ion-input
+            type="text"
+            [(ngModel)]="tasaInteresFormateada"
+            name="tasaInteres"
+            required
+            (ionBlur)="formatearTasa()"
+            (ionFocus)="quitarFormatoTasa()"
+            (ngModelChange)="validarFormulario()"
+          >
+          </ion-input>
+        </ion-item>
+
+        <div class="contenedor-boton">
+          <ion-button
+            type="button"
+            color="danger"
+            class="btn-accion btn-limpiar"
+            (click)="limpiarFormulario()"
+          >
+            LIMPIAR
+          </ion-button>
+
+          <ion-button
+            type="submit"
+            color="dark"
+            class="btn-accion"
+            [disabled]="!formularioValido"
+          >
+            CALCULAR
+          </ion-button>
+        </div>
+      </form>
+    </div>
+
+    <div class="columna-resultados">
+      <div class="grupo-resultado">
+        <label>Valor Futuro</label>
+        <div class="valor-result">${{ valorFuturo | number: '1.2-2' }}</div>
+      </div>
+
+      <div class="grupo-resultado">
+        <label>Interés Generado</label>
+        <div class="valor-result">${{ interesGenerado | number: '1.2-2' }}</div>
+      </div>
+
+      <div class="grupo-resultado">
+        <label>I.S.R. Retenido</label>
+        <div class="valor-result">${{ isr | number: '1.2-2' }}</div>
+      </div>
+
+      <div class="grupo-resultado">
+        <label>Retribución Real</label>
+        <div class="valor-result">${{ retribucion | number: '1.2-2' }}</div>
+      </div>
+
+      <div class="grupo-resultado">
+        <label>Retorno de Inversión</label>
+        <div class="valor-result">{{ retorno | number: '1.2-2' }}%</div>
+      </div>
+
+      <div class="contenedor-boton">
+        <ion-button
+          class="btn-accion btn-pdf"
+          (click)="exportarPDF()"
+          [disabled]="!calculado"
+        >
+          EXPORTAR PDF
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

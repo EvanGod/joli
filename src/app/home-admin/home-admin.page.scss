@@ -1,0 +1,76 @@
+:host {
+  ion-content {
+    --background: #f4f4f4;
+    color: #333;
+  }
+}
+
+.centrado-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.card-login {
+  background: white;
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.logo-login {
+  width: 72px;
+  margin-bottom: 24px;
+}
+
+.saludo {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #111;
+}
+
+.titulo-login {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.subtitulo {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 32px;
+  line-height: 1.4;
+}
+
+.formulario-login {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.boton-login {
+  font-weight: 600;
+  border-radius: 10px;
+  --background: #333;
+  --background-hover: #111;
+  --color: #fff;
+}
+
+.boton-login[color='danger'] {
+  --background: #c0392b;
+  --background-hover: #a93226;
+}
+
+.copy-seguridad {
+  font-size: 12px;
+  color: #999;
+  margin-top: 12px;
+}

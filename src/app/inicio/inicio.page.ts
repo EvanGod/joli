@@ -66,7 +66,7 @@ testimonios: any[] = [
     mensaje: 'SUPER RECOMIENDO!!! Excelente atención!! Financiaron mi modalidad 40, trámite sencillo, información transparente y profesionalismo. Muy satisfecha!'
   },
   {
-    nombre: 'lvmendoz Vázquez',
+    nombre: 'Ivan Vázquez',
     mensaje: 'Excelente servicio, atención personalizada, jamás te dejan solo, resuelven todas tus dudas y lo mejor, te dan esa confianza que se requiere al 100%.'
   },
   {

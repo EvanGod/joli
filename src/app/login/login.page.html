@@ -1,0 +1,53 @@
+<app-loading-spinner></app-loading-spinner>
+<app-error-modal></app-error-modal>
+
+<ion-content
+  class="ion-padding fondo-login"
+  [fullscreen]="true"
+  scroll-y="false"
+>
+  <div class="centrado-login">
+    <div class="card-login">
+      <img src="assets/joli_logo.jpg" alt="Logo JOLI" class="logo-login" />
+
+      <h1 class="saludo">¡Bienvenido!</h1>
+      <h2 class="titulo-login">Panel Administrativo</h2>
+      <p class="subtitulo">
+        Acceso seguro cifrado para administradores de JOLI
+      </p>
+
+      <form (ngSubmit)="login()" class="formulario-login">
+        <div class="input-group">
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-input
+            type="email"
+            placeholder="Correo electrónico"
+            [(ngModel)]="email"
+            name="email"
+            required
+          ></ion-input>
+        </div>
+
+        <div class="input-group">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-input
+            type="password"
+            placeholder="Contraseña"
+            [(ngModel)]="password"
+            name="password"
+            required
+          ></ion-input>
+        </div>
+
+        <ion-button expand="block" type="submit" class="boton-login">
+          INGRESAR
+        </ion-button>
+      </form>
+
+      <p class="copy-seguridad">
+        Este panel es exclusivo para uso administrativo.<br />
+        Todo acceso queda registrado.
+      </p>
+    </div>
+  </div>
+</ion-content>

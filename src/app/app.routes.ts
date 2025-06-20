@@ -1,4 +1,6 @@
 import { Routes } from '@angular/router';
+import { authGuard } from './guards/auth.guard';
+import { loginRedirectGuard } from './guards/login-redirect.guard';
 
 export const routes: Routes = [
   {
@@ -25,5 +27,20 @@ export const routes: Routes = [
   {
     path: 'planes',
     loadComponent: () => import('./planes/planes.page').then( m => m.PlanesPage)
+  },
+  {
+    path: 'login',
+    loadComponent: () => import('./login/login.page').then( m => m.LoginPage),
+    canActivate: [loginRedirectGuard],
+  },
+  {
+    path: 'propuesta',
+    loadComponent: () => import('./propuesta/propuesta.page').then( m => m.PropuestaPage),
+    canActivate: [authGuard],
+  },
+  {
+    path: 'home-admin',
+    loadComponent: () => import('./home-admin/home-admin.page').then( m => m.HomeAdminPage),
+    canActivate: [authGuard],
   },
 ];

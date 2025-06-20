@@ -1,0 +1,27 @@
+<ion-content class="ion-padding fondo-login" [fullscreen]="true" scroll-y="false">
+  <div class="centrado-login">
+    <div class="card-login">
+      <img src="assets/joli_logo.jpg" alt="Logo JOLI" class="logo-login" />
+
+      <h1 class="saludo">¡Hola de nuevo!</h1>
+      <h2 class="titulo-login">Bienvenido, Admin</h2>
+      <p class="subtitulo">
+        Aquí puedes administrar el sistema o explorar otras opciones.
+      </p>
+
+      <div class="formulario-login">
+        <ion-button expand="block" class="boton-login" (click)="irPropuesta()">
+          Ir a Propuesta
+        </ion-button>
+
+        <ion-button expand="block" class="boton-login" color="danger" (click)="cerrarSesion()">
+          Cerrar Sesión
+        </ion-button>
+      </div>
+
+      <p class="copy-seguridad">
+        Administración JOLI • Sistema protegido y monitoreado.
+      </p>
+    </div>
+  </div>
+</ion-content>
