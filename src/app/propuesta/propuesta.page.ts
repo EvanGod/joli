@@ -5,6 +5,7 @@ import { IonicModule, LoadingController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
+import { PropuestaService } from '../services/propuesta.service';
 
 (pdfMake as any)['vfs'] = (pdfFonts as any).vfs;
 
@@ -33,7 +34,11 @@ export class PropuestaPage {
   formularioValido = false;
   calculado = false;
 
-  constructor(private router: Router, private loadingCtrl: LoadingController) {}
+  constructor(
+    private router: Router,
+    private loadingCtrl: LoadingController,
+    private propuesta: PropuestaService
+  ) {}
 
   async irHomeConLoading() {
     const loading = await this.loadingCtrl.create({
@@ -435,7 +440,44 @@ export class PropuestaPage {
       },
     };
 
-    pdfMake.createPdf(docDefinition).download(`Propuesta-${this.nombre}.pdf`);
+    pdfMake.createPdf(docDefinition).getBlob(async (blob: Blob) => {
+      const loading = await this.loadingCtrl.create({
+        message: 'Enviando propuesta...',
+        spinner: 'crescent',
+        cssClass: 'custom-loading',
+      });
+      await loading.present();
+
+      const formData = new FormData();
+
+      formData.append('nombre', this.nombre);
+      formData.append('inversionInicial', String(this.inversionInicial));
+      formData.append('tasaInteres', String(this.tasaInteres));
+      formData.append('anios', String(this.anios));
+      formData.append('valorFuturo', String(this.valorFuturo));
+      formData.append('interesGenerado', String(this.interesGenerado));
+      formData.append('isr', String(this.isr));
+      formData.append('retribucion', String(this.retribucion));
+      formData.append('retorno', String(this.retorno.toFixed(2)));
+
+      const pdfFile = new File([blob], `Propuesta-${this.nombre}.pdf`, {
+        type: 'application/pdf',
+      });
+      formData.append('pdf', pdfFile);
+
+      this.propuesta.enviarPropuesta(formData).subscribe({
+        next: async (res) => {
+          await loading.dismiss();
+          alert('Propuesta enviada correctamente.');
+          this.router.navigate(['/home-admin']);
+        },
+        error: async (err) => {
+          await loading.dismiss();
+          console.error('Error al enviar propuesta:', err);
+          alert('Hubo un error al enviar la propuesta.');
+        },
+      });
+    });
   }
 
   async toBase64(url: string): Promise<string> {

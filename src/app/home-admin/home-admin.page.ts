@@ -1,25 +1,61 @@
 import { Component } from '@angular/core';
-import { IonContent, IonButton } from '@ionic/angular/standalone';
+import {
+  IonContent,
+  IonMenu,
+  IonMenuToggle,
+  IonButton,
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonTitle,
+  IonIcon,
+} from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { PropuestaPage } from '../propuesta/propuesta.page';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home-admin',
+  standalone: true,
   templateUrl: './home-admin.page.html',
   styleUrls: ['./home-admin.page.scss'],
-  standalone: true,
-  imports: [CommonModule, IonContent, IonButton],
+  imports: [
+    CommonModule,
+    IonContent,
+    IonMenu,
+    IonMenuToggle,
+    IonButton,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonTitle,
+    IonIcon,
+    PropuestaPage,
+  ],
 })
 export class HomeAdminPage {
-  constructor(private authService: AuthService, private router: Router) {}
+  vista: 'propuesta' | null = null;
+
+  constructor(
+    private authService: AuthService,
+    private menuCtrl: MenuController
+  ) {
+    this.menuCtrl.enable(true, 'main-menu');
+  }
+
+  async mostrarVista(nombre: 'propuesta') {
+    this.vista = nombre;
+    await this.menuCtrl.close();
+  }
+
+  irHome() {
+    this.vista = null;
+    this.menuCtrl.close();
+  }
 
   cerrarSesion() {
     this.authService.logout();
-    this.router.navigate(['/login']);
-  }
-
-  irPropuesta() {
-    this.router.navigate(['/propuesta']);
+    this.menuCtrl.close();
   }
 }

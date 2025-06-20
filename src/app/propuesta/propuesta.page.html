@@ -1,4 +1,4 @@
-<ion-content class="ion-padding fondo-blanco">
+<div class="fondo-blanco contenedor-principal">
   <div class="contenedor-formulario">
     <div class="columna-inputs">
       <div class="logo-joli-container" (click)="irHomeConLoading()">
@@ -28,8 +28,7 @@
             (ionBlur)="formatearInversion()"
             (ionFocus)="quitarFormatoInversion()"
             (ngModelChange)="validarFormulario()"
-          >
-          </ion-input>
+          ></ion-input>
         </ion-item>
 
         <ion-item fill="outline">
@@ -55,8 +54,7 @@
             (ionBlur)="formatearTasa()"
             (ionFocus)="quitarFormatoTasa()"
             (ngModelChange)="validarFormulario()"
-          >
-          </ion-input>
+          ></ion-input>
         </ion-item>
 
         <div class="contenedor-boton">
@@ -118,4 +116,4 @@
       </div>
     </div>
   </div>
-</ion-content>
+</div>

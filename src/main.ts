@@ -19,7 +19,7 @@ import {
   medkitOutline, airplaneOutline, personOutline, carOutline,
   arrowForwardOutline, menuOutline, lockClosedOutline, cashOutline,
   calendarNumberOutline,trendingUpOutline, checkmarkCircle, closeCircle, alertCircle, informationCircle,
-  trashOutline, searchOutline, heartOutline, starOutline, calculatorOutline
+  trashOutline, searchOutline, heartOutline, starOutline, calculatorOutline, documentTextOutline, logOutOutline,
 } from 'ionicons/icons';
 
 addIcons({
@@ -52,7 +52,9 @@ addIcons({
   'search-outline': searchOutline,
   'heart-outline': heartOutline,
   'star-outline': starOutline,
-  'calculator-outline': calculatorOutline
+  'calculator-outline': calculatorOutline,
+  'document-text-outline': documentTextOutline,
+  'log-out-outline': logOutOutline
 });
 
 bootstrapApplication(AppComponent, {
