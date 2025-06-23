@@ -10,7 +10,7 @@ export class PropuestaService {
 
   constructor(private http: HttpClient) {}
 
-  enviarPropuesta(formData: FormData) {
-    return this.http.post(this.baseUrl, formData);
+  enviarPropuesta(data: any) {
+    return this.http.post(this.baseUrl, data); // <-- JSON directo 🔥
   }
 }
