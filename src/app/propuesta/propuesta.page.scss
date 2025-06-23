@@ -1,183 +1,183 @@
 :host {
+  display: block;
+
   ion-content {
-    --background: #f4f4f4;
-    color: #333;
+    --background: #f8f9fa;
+    color: #222;
   }
-}
 
-.contenedor-principal {
-  padding: 32px 16px;
-  min-height: 100vh;
-  overflow-y: auto;
-  box-sizing: border-box;
-  background-color: #f4f4f4;
-}
+  .contenedor-principal {
+    padding: 32px 16px;
+    min-height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+  }
 
-
-.contenedor-formulario {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 32px 16px;
-}
-
-.columna-inputs,
-.columna-resultados {
-  background-color: white;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
-  width: 100%;
-  max-width: 460px;
-}
-
-.logo-joli {
-  width: 72px;
-  display: block;
-  margin: 0 auto 24px;
-}
-
-.logo-joli-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 24px;
-  cursor: pointer;
-}
-
-.formulario-elegante ion-item {
-  margin-bottom: 16px;
-  --background: #fff;
-  --border-radius: 10px;
-  --padding-start: 12px;
-  --inner-padding-end: 12px;
-  --highlight-color-focused: #00a0af;
-  --min-height: 50px;
-}
-
-ion-label {
-  color: #333 !important;
-  font-weight: 500;
-  font-size: 14px;
-}
-
-ion-input {
-  color: #111;
-  font-size: 15px;
-}
-
-ion-icon {
-  color: #666;
-}
-
-.btn-home {
-  position: absolute;
-  left: 24px;
-  top: 24px;
-  padding: 8px;
-  border-radius: 50%;
-  --padding-start: 6px;
-  --padding-end: 6px;
-  --border-radius: 50%;
-  --box-shadow: none;
-}
-
-.btn-accion {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 16px;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 999px;
-  height: auto;
-  width: auto;
-  --min-width: 0;
-  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  text-transform: uppercase;
-}
-
-.btn-accion[color='dark'] {
-  --background: #333;
-  --background-hover: #111;
-  --color: #fff;
-}
-
-.btn-accion.btn-pdf {
-  --background: #005ea2;
-  --background-hover: #004b85;
-  --color: #fff;
-  margin-top: 24px;
-}
-
-.btn-accion[color='danger'] {
-  --background: #e53935;
-  --background-hover: #c62828;
-  --color: #fff;
-}
-
-.btn-accion[color='light'] {
-  --background: #f1f1f1;
-  --background-hover: #ddd;
-  --color: #333;
-}
-
-.btn-accion ion-icon {
-  font-size: 18px;
-  color: inherit;
-}
-
-.contenedor-boton {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.grupo-resultado {
-  margin-bottom: 16px;
-  padding: 12px 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.grupo-resultado:last-child {
-  border-bottom: none;
-}
-
-.grupo-resultado label {
-  font-weight: 500;
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 4px;
-  display: block;
-}
-
-.valor-result {
-  font-size: 18px;
-  font-weight: 600;
-  color: #111;
-}
-
-@media (max-width: 768px) {
   .contenedor-formulario {
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px 16px;
   }
 
   .columna-inputs,
   .columna-resultados {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     width: 100%;
+    max-width: 480px;
+    transition: all 0.3s ease-in-out;
   }
-}
 
-::ng-deep .custom-loading .loading-wrapper {
-  background: #ffffff !important;
-  color: #333 !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
-  border-radius: 12px !important;
-  padding: 16px !important;
-}
+  .logo-joli {
+    width: 70px;
+    display: block;
+    margin: 0 auto 24px;
+  }
 
-::ng-deep .custom-loading .loading-spinner circle {
-  stroke: #00a0af !important;
+  .logo-joli-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    cursor: pointer;
+  }
+
+  .formulario-elegante ion-item {
+    margin-bottom: 18px;
+    --background: #fff;
+    --border-radius: 12px;
+    --padding-start: 14px;
+    --inner-padding-end: 14px;
+    --highlight-color-focused: #007da6;
+    --min-height: 52px;
+    border: 1px solid #e0e0e0;
+  }
+
+  ion-label {
+    color: #333 !important;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  ion-input {
+    color: #222;
+    font-size: 16px;
+  }
+
+  ion-icon {
+    color: #777;
+  }
+
+  .btn-home {
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  }
+
+  .btn-accion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 999px;
+    height: auto;
+    width: auto;
+    text-transform: uppercase;
+    transition: 0.2s ease;
+  }
+
+  .btn-accion[color='dark'] {
+    --background: #222;
+    --background-hover: #111;
+    --color: #fff;
+  }
+
+  .btn-accion.btn-pdf {
+    --background: #0074cc;
+    --background-hover: #005fa3;
+    --color: #fff;
+    margin-top: 24px;
+  }
+
+  .btn-accion[color='danger'] {
+    --background: #d32f2f;
+    --background-hover: #b71c1c;
+    --color: #fff;
+  }
+
+  .btn-accion[color='light'] {
+    --background: #f9f9f9;
+    --background-hover: #e0e0e0;
+    --color: #333;
+  }
+
+  .btn-accion ion-icon {
+    font-size: 18px;
+    color: inherit;
+  }
+
+  .contenedor-boton {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .grupo-resultado {
+    margin-bottom: 18px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .grupo-resultado:last-child {
+    border-bottom: none;
+  }
+
+  .grupo-resultado label {
+    font-weight: 500;
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  .valor-result {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  @media (max-width: 768px) {
+    .contenedor-formulario {
+      flex-direction: column;
+    }
+
+    .columna-inputs,
+    .columna-resultados {
+      width: 100%;
+    }
+  }
+
+  ::ng-deep .custom-loading .loading-wrapper {
+    background: #ffffff !important;
+    color: #333 !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+    border-radius: 14px !important;
+    padding: 18px !important;
+  }
+
+  ::ng-deep .custom-loading .loading-spinner circle {
+    stroke: #00b0c0 !important;
+  }
 }

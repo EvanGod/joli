@@ -6,11 +6,6 @@ import { ViewChild } from '@angular/core';
 
 import {
   IonContent,
-  IonHeader,
-  IonTitle,
-  IonToolbar,
-  IonButtons,
-  IonButton,
   IonIcon
 } from '@ionic/angular/standalone';
 
@@ -21,11 +16,6 @@ import {
   standalone: true,
   imports: [
     IonContent,
-    IonHeader,
-    IonTitle,
-    IonToolbar,
-    IonButtons,
-    IonButton,
     CommonModule,
     FormsModule,
     FooterComponent,

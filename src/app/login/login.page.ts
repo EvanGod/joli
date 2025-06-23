@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import {
   IonContent,
   IonInput,
-  IonItem,
   IonButton,
   IonIcon,
 } from '@ionic/angular/standalone';
@@ -26,7 +25,6 @@ import { LoadingSpinnerComponent } from '../components/loading-spinner/loading-s
     FormsModule,
     HttpClientModule,
     IonContent,
-    IonItem,
     IonInput,
     IonButton,
     IonIcon,

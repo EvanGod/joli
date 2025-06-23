@@ -6,11 +6,6 @@ import { ViewChild } from '@angular/core';
 
 import {
   IonContent,
-  IonHeader,
-  IonTitle,
-  IonToolbar,
-  IonButtons,
-  IonButton,
   IonIcon
 } from '@ionic/angular/standalone';
 
@@ -19,7 +14,7 @@ import {
   templateUrl: './nosotros.page.html',
   styleUrls: ['./nosotros.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, FooterComponent, IonButtons, IonButton, IonIcon],
+  imports: [IonContent, CommonModule, FormsModule, FooterComponent, IonIcon],
 })
 export class NosotrosPage implements OnInit {
 menuAbierto: boolean = false;

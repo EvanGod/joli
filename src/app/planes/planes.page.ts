@@ -6,18 +6,13 @@ import { ViewChild } from '@angular/core';
 
 import {
   IonContent,
-  IonHeader,
-  IonTitle,
-  IonToolbar,
-  IonButtons,
-  IonButton
 } from '@ionic/angular/standalone';
 @Component({
   selector: 'app-planes',
   templateUrl: './planes.page.html',
   styleUrls: ['./planes.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, FooterComponent, IonButtons, IonButton]
+  imports: [IonContent, CommonModule, FormsModule, FooterComponent]
 })
 export class PlanesPage implements OnInit {
 
